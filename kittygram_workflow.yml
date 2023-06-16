@@ -151,12 +151,7 @@ jobs:
           push: true
           # Тут вместо username должен быть ваш логин на Docker Hub
           tags: fenixzip/kittygram_gateway:latest
-"""вот эта команду пушит через майн, в самом начале стоит
-on:
-  push:
-    branches:
-      - main
-""""
+
   deploy:
     runs-on: ubuntu-latest
     needs: 
@@ -199,7 +194,7 @@ on:
           sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
           sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
           sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /static/static/
-# vot
+
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
