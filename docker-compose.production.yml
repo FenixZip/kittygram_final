@@ -32,3 +32,6 @@ services:
     volumes:
       - static:/static
       - media:/media
+    depends_on:
+      - backend
+# устал!!!
