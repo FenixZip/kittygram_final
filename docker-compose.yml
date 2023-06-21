@@ -32,16 +32,5 @@ services:
     volumes:
       - static:/static
       - media:/app/media/
-""" Николай, я не понимаю в чем дело, теперь зарегаться не могу, пишет ошибка сервера.
-вернул все как было, тоже самое.
-может в настройках деваулт что то не то?
- location /media/ {
-        proxy_set_header Host $http_host;
-        root /app/media/;
-    }
-
-    location / {
-        proxy_pass http://127.0.0.1:9000;
-    }
-Делаю все как по учебнику, тут вообще не понял что нужнео
-""""
+    depends_on:
+      - backend
