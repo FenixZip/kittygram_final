@@ -1,4 +1,4 @@
-# flake8: noqa
+# flake8: noqa vse tyt
 import os
 from pathlib import Path
 
@@ -12,7 +12,7 @@ SECRET_KEY =  os.getenv('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1, localhost').split(',')
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
